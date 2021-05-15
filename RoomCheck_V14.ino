@@ -265,7 +265,7 @@ void loop()
           }else if(weight >= 0.100 && (weight >= (contor*weightValue - weightValue/4)) && (weight <= (contor*weightValue + weightValue/4))){
               Firebase.setInt(firebaseData, path + "/details/NumberOfObjects", contor);
               contor++;
-          }else if(weight >= 0.100 && (weight >= ((contor-2)*weightValue - weightValue/4)) && (weight <= ((contor-2)*weightValue + weightValue/4)) && contor > 2 && weight >= 0.100 ){
+          }else if(weight >= 0.100 && (weight >= ((contor-2)*weightValue - weightValue/4)) && (weight <= ((contor-2)*weightValue + weightValue/4)) && contor > 2){
               contor--;
               Firebase.setInt(firebaseData, path + "/details/NumberOfObjects", contor - 1);
           }else if(weight < 0.100 && initialWeightValue != 0){
